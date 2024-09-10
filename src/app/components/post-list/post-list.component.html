@@ -1,0 +1,6 @@
+<h1>My Thoughts</h1>
+@for(p of AllPosts; track $index){
+    <app-post (Deleted)="DeletePost($event)" [DisplayPost]="p"></app-post>
+}
+
+<app-post-form (PostCreated)="onSubmit($event)"></app-post-form>

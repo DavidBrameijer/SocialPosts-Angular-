@@ -1,0 +1,8 @@
+<button (click)="toggleDisplay()">New Thought</button>
+@if(display === true){
+    <input placeholder="Enter title" id="title" type="text" [(ngModel)]="formPost.title" />
+    <br>
+    <input placeholder="What's on your mind?" id="thought" type="text" [(ngModel)]="formPost.thought" />
+    <br>
+    <button (click)="emitCreated()">Post Thought</button>
+}
